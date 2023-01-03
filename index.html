@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/script.js"></script>
     <title>Criticism generator</title>
 </head>
 <body>
     <button onclick="generate()">Generate Criticism</button>
+    <script>
+        var criticismList = [ "Your work is sloppy and lacks attention to detail.", 
+"Your ideas are unoriginal and have been done before.", 
+"Your writing is unclear and lacks coherence.", 
+"Your argument is weak and lacks supporting evidence.", 
+"Your design is visually unappealing and lacks aesthetic appeal.", 
+"Your code is poorly written and difficult to understand.", 
+"Your presentation is boring and fails to engage the audience.", 
+"Your research is shallow and fails to delve deep into the topic.", 
+"Your analysis is flawed and fails to accurately interpret the data.", 
+"Your conclusions are premature and unsupported by the evidence presented." 
+]; 
+
+function generate() { 
+    const index = Math.floor(Math.random() * criticismList.length); 
+    const criticism = criticismList[index]; alert(criticism); 
+    if (confirm("Do you want to copy the criticism to your clipboard?") == true) { 
+        prompt("Copy it now", criticism) } 
+    } 
+    </script>
 </body>
 </html>
