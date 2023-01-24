@@ -26,12 +26,15 @@
 "You're not taking responsibility for your mistakes.",
 "You're not following through on your commitments.",
 "You're not being respectful to others.",
-"You're not open to feedback or suggestions for improvement."
+"You're not open to feedback or suggestions for improvement.",
+"You make claims that are undefendable.",
+"You fail to help others understand how you feel."
 ]; 
 
 function generate() { 
     const index = Math.floor(Math.random() * criticismList.length); 
-    const criticism = criticismList[index]; alert(criticism); 
+    const criticism = criticismList[index]; 
+    alert(criticism); 
     if (confirm("Do you want to copy the criticism to your clipboard?") == true) { 
         prompt("Copy it now", criticism) } 
     } 
